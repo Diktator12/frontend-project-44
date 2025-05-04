@@ -9,8 +9,7 @@ const name = greeting();
 console.log('Answer "yes" if the number is even, otherwise answer "no"');
 
 const generateRandomNumber = () => Math.floor(Math.random() * 100);
-const isEven = (number) => number % 2 === 0;
-// const correctAnswer = isEven ? 'yes' : 'no';
+const isEven = (num) => num % 2 === 0;
 
 const playRound = () => {
   const number = generateRandomNumber();
