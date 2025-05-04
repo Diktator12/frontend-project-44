@@ -2,8 +2,6 @@ import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
 const runGame = (description, generateRound) => {
-  console.log('Welcome to the Brain Games!');
-
   const name = greeting();
 
   console.log(description);
