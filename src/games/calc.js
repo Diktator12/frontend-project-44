@@ -20,9 +20,11 @@ const brainCalc = () => {
       let result
       if (selectedOperation === '+') {
         result = number1 + number2
-      } else if (selectedOperation === '-') {
+      }
+      else if (selectedOperation === '-') {
         result = number1 - number2
-      } else {
+      }
+      else {
         result = number1 * number2
       }
       return result.toString()
