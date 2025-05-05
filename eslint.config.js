@@ -1,9 +1,11 @@
 import js from '@eslint/js'
 import globals from 'globals'
-import airbnbBase from './node_modules/eslint-config-airbnb-base/rules/best-practices.js'
+import airbnbBase from 'eslint-config-airbnb-base'
 import importPlugin from 'eslint-plugin-import'
 
 export default [
+  ...js.configs.recommended.rules,
+  ...airbnbBase,
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
@@ -18,8 +20,6 @@ export default [
       import: importPlugin,
     },
     rules: {
-      ...js.configs.recommended.rules,
-      ...airbnbBase.rules,
       'semi': ['error', 'never'],
       'brace-style': ['error', 'stroustrup'],
       'arrow-parens': ['error', 'as-needed'],
