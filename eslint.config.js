@@ -20,8 +20,8 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...airbnbBase.rules,
-      semi: ['error', 'never'],
-      'brace-style': ['error', '1tbs'],
+      'semi': ['error', 'never'],
+      'brace-style': ['error', 'stroustrup'],
       'arrow-parens': ['error', 'as-needed'],
     },
   },
