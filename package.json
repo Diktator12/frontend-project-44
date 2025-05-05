@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/Diktator12/frontend-project-44#readme",
   "dependencies": {
-    "brain-calc": "^1.0.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
