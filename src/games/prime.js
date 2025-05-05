@@ -1,28 +1,28 @@
-import runGame from '../index.js'
+import runGame from '../index.js';
 
 const brainPrime = () => {
-  const desc = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+  const desc = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  const generateRandomNumber = () => Math.floor(Math.random() * 100)
+  const generateRandomNumber = () => Math.floor(Math.random() * 100);
 
   const playRound = () => {
-    const number = generateRandomNumber()
+    const number = generateRandomNumber();
 
-    const question = `${number}`
+    const question = `${number}`;
 
     const calculateAnswer = () => {
       for (let i = 2; i < number; i++) {
-        if (number % i === 0) return 'no'
+        if (number % i === 0) return 'no';
       }
-      return 'yes'
-    }
+      return 'yes';
+    };
 
-    const correctAnswer = calculateAnswer()
+    const correctAnswer = calculateAnswer();
 
-    return { question, correctAnswer }
-  }
+    return { question, correctAnswer };
+  };
 
-  runGame(desc, playRound)
-}
+  runGame(desc, playRound);
+};
 
-export default brainPrime
+export default brainPrime;
