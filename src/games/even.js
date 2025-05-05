@@ -4,7 +4,7 @@ const brainEven = () => {
   const desc = 'Answer "yes" if the number is even, otherwise answer "no"'
 
   const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1
-  const isEven = (num) => num % 2 === 0
+  const isEven = num => num % 2 === 0
 
   const playRound = () => {
     const number = generateRandomNumber()
