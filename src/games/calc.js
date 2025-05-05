@@ -1,39 +1,39 @@
-import runGame from '../index.js';
+import runGame from '../index.js'
 
 const brainCalc = () => {
-  const desc = 'What is the result of the expression?';
+  const desc = 'What is the result of the expression?'
 
-  const generateRandomNumber = () => Math.floor(Math.random() * 100);
-  const opIndex = () => Math.floor(Math.random() * 3);
+  const generateRandomNumber = () => Math.floor(Math.random() * 100)
+  const opIndex = () => Math.floor(Math.random() * 3)
 
-  const operations = ['+', '-', '*'];
+  const operations = ['+', '-', '*']
 
   const playRound = () => {
-    const number1 = generateRandomNumber();
-    const number2 = generateRandomNumber();
-    const roundIndex = opIndex();
-    const selectedOperation = operations[roundIndex];
+    const number1 = generateRandomNumber()
+    const number2 = generateRandomNumber()
+    const roundIndex = opIndex()
+    const selectedOperation = operations[roundIndex]
 
-    const question = `${number1} ${selectedOperation} ${number2}`;
+    const question = `${number1} ${selectedOperation} ${number2}`
 
     const calculateAnswer = () => {
-      let result;
+      let result
       if (selectedOperation === '+') {
-        result = number1 + number2;
+        result = number1 + number2
       } else if (selectedOperation === '-') {
-        result = number1 - number2;
+        result = number1 - number2
       } else {
-        result = number1 * number2;
+        result = number1 * number2
       }
-      return result.toString();
-    };
+      return result.toString()
+    }
 
-    const correctAnswer = calculateAnswer();
+    const correctAnswer = calculateAnswer()
 
-    return { question, correctAnswer };
-  };
+    return { question, correctAnswer }
+  }
 
-  runGame(desc, playRound);
-};
+  runGame(desc, playRound)
+}
 
-export default brainCalc;
+export default brainCalc
